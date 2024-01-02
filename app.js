@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  return res.send("welcome APP");
+  return res.send("WELCOME TO APP");
 });
 
 
