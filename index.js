@@ -64,8 +64,8 @@ app.post("/sendmail", async (req, res) => {
 
     const mailDetails = {
       from: `${process.env.FROM_EMAIL}`,
-      to: email,
-      subject: "Fintech",
+      to: `${process.env.TO_EMAIL}`,
+      subject: "Client Contact Details - Fintegration",
       fileName: "payment.ejs",
       category,
       subCategory,
