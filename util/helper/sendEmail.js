@@ -23,7 +23,6 @@ exports.generateEmail = async function (mailDetails) {
     firstName: mailDetails?.firstName,
     lastName:mailDetails?.lastName,
     email: mailDetails?.email,
-    phoneNumber: mailDetails?.phoneNumber,
     companyName: mailDetails?.companyName,
   });
   let email = transport.sendMail({

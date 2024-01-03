@@ -27,7 +27,6 @@ app.post("/sendmail", async (req, res) => {
       firstName,
       lastName,
       email,
-      phoneNumber,
       companyName,
     } = req.body;
 
@@ -38,7 +37,6 @@ app.post("/sendmail", async (req, res) => {
       !firstName ||
       !lastName ||
       !email ||
-      !phoneNumber ||
       !companyName
     ) {
       return res.status(400).json({
@@ -50,7 +48,6 @@ app.post("/sendmail", async (req, res) => {
     let validation = valid.validateObject(
       {
         email,
-        phoneNumber,
       },
       validateSchema.email
     );
@@ -73,7 +70,6 @@ app.post("/sendmail", async (req, res) => {
       firstName,
       lastName,
       email,
-      phoneNumber,
       companyName,
     };
     const generate = await generateEmail(mailDetails);
